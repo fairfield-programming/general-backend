@@ -14,6 +14,8 @@ If you have any questions about this model, or have a change to suggest, please 
 
 classDiagram
     User <|-- Post
+    User <|-- PostLikes
+    Post <|-- PostLikes
 
     User : int id
     User : date birthdate
