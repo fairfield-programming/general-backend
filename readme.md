@@ -15,17 +15,17 @@ If you have any questions about this model, or have a change to suggest, please 
 classDiagram
     User <|-- Post
 
-    User : +int id
-    User : +date birthdate
-    User : +String firstname
-    User : +String lastname
-    User : +String phone_number
-    User : +String email
-    User : +String password_hash
-    User : +String biography
+    User : int id
+    User : date birthdate
+    User : string firstname
+    User : string lastname
+    User : string phone_number
+    User : string email
+    User : string password_hash
+    User : string biography
 
-    User : +Object profile
-    User : +Object settings
+    User : +object profile
+    User : +object settings
 
     class Post{
       +String beakColor
