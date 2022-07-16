@@ -24,13 +24,18 @@ classDiagram
     User : string password_hash
     User : string biography
 
-    User : +object profile
-    User : +object settings
+    User : object profile
+    User : object settings
 
     class Post{
-      +String beakColor
-      +swim()
-      +quack()
+      string content
+      int reply_id
+      int user_id
+    }
+
+    class PostLikes {
+        int post_id
+        int user_id
     }
 
 ```
