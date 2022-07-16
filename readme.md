@@ -27,7 +27,7 @@ classDiagram
     User : object profile
     User : object settings
 
-    class Post{
+    class Post {
       string content
       int reply_id
       int user_id
