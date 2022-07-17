@@ -17,7 +17,8 @@ classDiagram
     User <|-- PostLikes
     Post <|-- PostLikes
     User <|-- Relationship
-    User <|-- Relationship
+    User <|-- GroupMember
+    Group <|-- GroupMember
 
     User : int id
     User : date birthdate
@@ -54,6 +55,18 @@ classDiagram
 
     class Group {
         int id
+        string title
+        string slug
+        string summary
+        object profile
+        object settings
+    }
+
+    class GroupMember {
+        int id
+        int user_id
+        int group_id
+        member_type role
     }
 
 ```
