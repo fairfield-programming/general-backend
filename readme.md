@@ -16,9 +16,12 @@ classDiagram
     User <|-- Post
     User <|-- PostLikes
     Post <|-- PostLikes
+    User <|-- Relationship
+    User <|-- Relationship
 
     User : int id
     User : date birthdate
+    User : string username
     User : string firstname
     User : string lastname
     User : string phone_number
@@ -30,14 +33,34 @@ classDiagram
     User : object settings
 
     class Post {
-      string content
-      int reply_id
-      int user_id
+        int id
+        string content
+        int reply_id
+        int user_id
     }
 
     class PostLikes {
+        int id
         int post_id
         int user_id
     }
 
+    class Relationship {
+        int id
+        int source_id
+        int target_id
+        status_enum status
+    }
+
+    class Group {
+        int id
+    }
+
 ```
+
+#### Status Enum
+
+- Request
+- Rejected
+- Active
+- Blocked
